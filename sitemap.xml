@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mizeri.github.io/2021/04/18/hexo-sitemap-google/</loc>
+    
+    <lastmod>2021-04-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mizeri.github.io/categories/index.html</loc>
     
     <lastmod>2021-04-17</lastmod>
@@ -82,6 +89,13 @@
   
   <url>
     <loc>https://mizeri.github.io/tags/Github/</loc>
+    <lastmod>2021-04-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mizeri.github.io/tags/Google/</loc>
     <lastmod>2021-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

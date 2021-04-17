@@ -20,24 +20,23 @@
     var CONFIG = {"hostname":"mizeri.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="将本地搭建的Hexo博客部署到Github个人主页（Git Pages）">
+  <meta name="description" content="为了让博文可以被Google搜索到，需要配置站点地图（Sitemap）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo个人博客部署到Github">
-<meta property="og:url" content="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/index.html">
+<meta property="og:title" content="Hexo博客站点地图配置（Google）">
+<meta property="og:url" content="https://mizeri.github.io/2021/04/18/hexo-sitemap-google/index.html">
 <meta property="og:site_name" content="Mizeri">
-<meta property="og:description" content="将本地搭建的Hexo博客部署到Github个人主页（Git Pages）">
+<meta property="og:description" content="为了让博文可以被Google搜索到，需要配置站点地图（Sitemap）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-17T16:50:44.000Z">
-<meta property="article:modified_time" content="2021-04-17T16:53:37.823Z">
+<meta property="article:published_time" content="2021-04-17T17:18:46.000Z">
+<meta property="article:modified_time" content="2021-04-17T17:32:30.247Z">
 <meta property="article:author" content="Mizeri">
 <meta property="article:tag" content="探索">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="MacOS">
-<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Google">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/">
+<link rel="canonical" href="https://mizeri.github.io/2021/04/18/hexo-sitemap-google/">
 
 
 <script id="page-configurations">
@@ -50,7 +49,7 @@
   };
 </script>
 
-  <title>Hexo个人博客部署到Github | Mizeri</title>
+  <title>Hexo博客站点地图配置（Google） | Mizeri</title>
   
 
 
@@ -182,7 +181,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/">
+    <link itemprop="mainEntityOfPage" href="https://mizeri.github.io/2021/04/18/hexo-sitemap-google/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-square.png">
@@ -195,7 +194,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo个人博客部署到Github
+          Hexo博客站点地图配置（Google）
         </h1>
 
         <div class="post-meta">
@@ -206,7 +205,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-04-18 00:50:44 / 修改时间：00:53:37" itemprop="dateCreated datePublished" datetime="2021-04-18T00:50:44+08:00">2021-04-18</time>
+              <time title="创建时间：2021-04-18 01:18:46 / 修改时间：01:32:30" itemprop="dateCreated datePublished" datetime="2021-04-18T01:18:46+08:00">2021-04-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,10 +235,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>将本地搭建的Hexo博客部署到Github个人主页（Git Pages）</p>
+        <p>为了让博文可以被Google搜索到，需要配置站点地图（Sitemap）</p>
 <span id="more"></span>
 
+<h1 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h1><p>在开始之前需要注意，本文适用于<a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/">NexT主题</a>，其他主题的设置可能会有不同。本文只适用于Google，Baidu请看<a href="#TODO">这里</a></p>
+<h1 id="启用主题的sitemap"><a href="#启用主题的sitemap" class="headerlink" title="启用主题的sitemap"></a>启用主题的sitemap</h1><p>修改<strong>主题配置文件</strong>（<code>themes/next/_config.yml</code>）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	...</span><br><span class="line">	sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br></pre></td></tr></table></figure>
 
+<h1 id="安装sitemap插件"><a href="#安装sitemap插件" class="headerlink" title="安装sitemap插件"></a>安装sitemap插件</h1><p>在终端中使用npm安装sitemap插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>生成静态文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>此时在public目录下可见<code>sitemap.xml</code></p>
+<h1 id="谷歌搜索配置"><a href="#谷歌搜索配置" class="headerlink" title="谷歌搜索配置"></a>谷歌搜索配置</h1><h2 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h2>
     </div>
 
     
@@ -254,7 +264,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/" title="Hexo个人博客部署到Github">https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/</a>
+    <a href="https://mizeri.github.io/2021/04/18/hexo-sitemap-google/" title="Hexo博客站点地图配置（Google）">https://mizeri.github.io/2021/04/18/hexo-sitemap-google/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -268,8 +278,7 @@
               <a href="/tags/%E6%8E%A2%E7%B4%A2/" rel="tag"># 探索</a>
               <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
               <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-              <a href="/tags/MacOS/" rel="tag"># MacOS</a>
-              <a href="/tags/Github/" rel="tag"># Github</a>
+              <a href="/tags/Google/" rel="tag"># Google</a>
           </div>
 
         
@@ -278,13 +287,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/16/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%EF%BC%88MacOS/" rel="prev" title="Hexo 个人博客本地搭建（MacOS)">
-      <i class="fa fa-chevron-left"></i> Hexo 个人博客本地搭建（MacOS)
+    <a href="/2021/04/18/Hexo-blog-deploy/" rel="prev" title="Hexo个人博客部署到Github">
+      <i class="fa fa-chevron-left"></i> Hexo个人博客部署到Github
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/18/hexo-sitemap-google/" rel="next" title="Hexo博客站点地图配置（Google）">
-      Hexo博客站点地图配置（Google） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -343,6 +349,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">开始之前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%9A%84sitemap"><span class="nav-number">2.</span> <span class="nav-text">启用主题的sitemap</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85sitemap%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">安装sitemap插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">3.1.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">谷歌搜索配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83"><span class="nav-number">4.1.</span> <span class="nav-text">验证网站所有权</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
